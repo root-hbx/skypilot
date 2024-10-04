@@ -18,7 +18,7 @@ from sky import exceptions
 from sky import sky_logging
 from sky import task as task_lib
 from sky.backends import backend_utils
-from sky.backends import cloud_vm_ray_backend
+from sky.serve import cloud_vm_ray_backend
 from sky.serve import constants
 from sky.serve import controller
 from sky.serve import load_balancer

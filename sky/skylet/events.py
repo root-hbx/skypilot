@@ -11,9 +11,9 @@ import yaml
 
 from sky import clouds
 from sky import sky_logging
-from sky.backends import cloud_vm_ray_backend
 from sky.clouds import cloud_registry
 from sky.jobs import utils as managed_job_utils
+from sky.serve import cloud_vm_ray_backend
 from sky.serve import serve_utils
 from sky.skylet import autostop_lib
 from sky.skylet import constants

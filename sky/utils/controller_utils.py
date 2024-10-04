@@ -32,7 +32,7 @@ from sky.utils import ux_utils
 
 if typing.TYPE_CHECKING:
     from sky import task as task_lib
-    from sky.backends import cloud_vm_ray_backend
+    from sky.serve import cloud_vm_ray_backend
 
 logger = sky_logging.init_logger(__name__)
 

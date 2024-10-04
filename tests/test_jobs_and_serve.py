@@ -179,7 +179,7 @@ class TestJobsOperations:
             mock_is_controller_accessible)
 
         monkeypatch.setattr(
-            'sky.backends.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
+            'sky.serve.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
             mock_get_job_table_no_job)
 
         cli_runner = cli_testing.CliRunner()
@@ -191,7 +191,7 @@ class TestJobsOperations:
                           SystemExit), (result.exception, result.output)
 
         monkeypatch.setattr(
-            'sky.backends.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
+            'sky.serve.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
             mock_get_job_table_one_job)
         result = cli_runner.invoke(cli.down, [jobs.JOB_CONTROLLER_NAME],
                                    input='n')
@@ -321,7 +321,7 @@ class TestServeOperations:
             mock_is_controller_accessible)
 
         monkeypatch.setattr(
-            'sky.backends.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
+            'sky.serve.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
             mock_get_services_no_service)
 
         cli_runner = cli_testing.CliRunner()
@@ -333,7 +333,7 @@ class TestServeOperations:
                           SystemExit), (result.exception, result.output)
 
         monkeypatch.setattr(
-            'sky.backends.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
+            'sky.serve.cloud_vm_ray_backend.CloudVmRayBackend.run_on_head',
             mock_get_services_one_service)
         result = cli_runner.invoke(cli.down, [serve.SKY_SERVE_CONTROLLER_NAME],
                                    input='n')
